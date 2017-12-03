@@ -1,37 +1,117 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="../css/owl.carousel.min.css">
+    <title>INPN</title>
+</head>
+<body>
+    <div class="header">
+        <div class="h-social">
+            <a href="http://google.com"><span></span></a>
+            <a href="http://google.com"><span></span></a>
+            <a href="http://google.com"><span></span></a>
+        </div>
+        <div class="h-lang">
+            <a href="http://google.com">UA</a>
+            <a href="http://google.com">RU</a>
+            <a href="http://google.com">EN</a>
+        </div>
+        <div class="h-regis">
+            <div class="header-search">
+                <form id="demo-b" method="post" action="/">
+                    <input type="search" id="s" name="s" placeholder="">
+                </form>
+            </div>
+            <div class="autorization">
+                <a href="http://google.com">Вхід<span></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="main-cont">
+        <nav class="m-nav">
+            <div class="m-name">
+                <a href="http://">
+                    <span></span>
+                </a>
+                <p>ДЕРЖАВНА УСТАНОВА <br> "Інститут неврології, психіатрії та наркології національної академії медичних наук України" ДУ ІНПН НАМН</p>
+            </div>
+            <div class="m-menu">
+                <a href=""><span></span><p>адміністрація</p> </a>
+                <a href=""><span></span><p>клініка</p> </a>
+                <a href=""><span></span><p>наука</p> </a>
+                <a href=""><span></span><p>освіта</p> </a>
+            </div>
+        </nav>
+    </div>
+    <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="item"><img src="../img/pic-f.jpg" alt="Clinik">
+            <p>Ми започаткували електронну чергу</p>
+            <a href="">детальніше</a>
+        </div>
+        <div class="item"><img src="../img/pic-s.jpg" alt="Clinik">
+            <p>Зміни у структурі ДНК</p>
+            <a href="">детальніше</a>
+        </div>
+        <div class="item"><img src="../img/pic-t.jpg" alt="Clinik">
+            <p>Перелік заборонених препаратів для людини</p>
+            <a href="">детальніше</a>
+        </div>
+        </div>
+    </div>
+    <div class="main-cont">
+        <div id="m-info">
+            <component :is="currentView">
 
-You can use the [editor on GitHub](https://github.com/mkhozhylo/mkhozhylo.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+            
+            </component>
+            <nav class="info-nav">
+                <a href="#" data-type="word" @click="switchView('word')">Привітання директора</a>
+                <a href="#" data-type="history" @click="switchView('history')">Історія установи</a>
+                <a href="#" data-type="other" @click="switchView('other')">Додаткова інформація</a>
+            </nav>
+        </div>
+    </div>
+    <footer>
+    
+    </footer>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.js"></script>
+<script src="../js/main.js"></script>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+        $(document).ready(function() {
+            $('a[href^="http://"], a[href^="https://"]').attr('target','_blank');
+        });
+</script>
+<script src="../js/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      navigation : true, // показывать кнопки next и prev 
+ 
+      slideSpeed : 500,
+      paginationSpeed : 400,
+      autoplay : true,
+      loop : true,
+      items : 1, 
+      itemsDesktop : false,
+      itemsDesktopSmall : false,
+      itemsTablet: false,
+      itemsMobile : false
+ 
+  });
+ 
+});
+</script>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mkhozhylo/mkhozhylo.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</body>
+</html>
